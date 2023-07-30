@@ -1,7 +1,7 @@
 # Hashtags Storage Analysis
 
 ## Abstract
-Analysis of storing hashtags in PostgreSQL to determine the optimal storage solution and efficient querying method.
+Using a `JSONB` column with a PostgreSQL `Generalized Inverted Index` was the most optimal and efficient method for storing and querying hashtags.
 
 ## Introduction
 Hashtags are a way to organize content around a specific topic.
@@ -12,6 +12,8 @@ The benefits of hashtags include:
 + `Connection`. Hashtags can be used to connect with people who are interested in the same things as you.
 + `Engagement`. Hashtags can be used to track trends on social media. This can be helpful for businesses and brands to see what topics are popular and to get involved in conversations.
 + `Promotion`. Hashtags can be used to promote your content and to get more people to see it. When you use relevant hashtags, your content will show up in search results for those hashtags. This can help you to reach a wider audience.
+
+Hashtags are ubiquitous in modern applications and having an optimal and efficient method for storing and querying hashtags is essential.
 
 ## Methods
 
