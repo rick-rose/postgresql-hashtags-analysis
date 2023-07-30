@@ -8,7 +8,7 @@ TRUNCATE tag RESTART IDENTITY CASCADE;
 TRUNCATE post_tag_normalized RESTART IDENTITY CASCADE;
 TRUNCATE post_tag_denormalized RESTART IDENTITY CASCADE;
 TRUNCATE post_tag_array RESTART IDENTITY CASCADE;
-TRUNCATE post_tag_json RESTART IDENTITY CASCADE;
+TRUNCATE post_tag_josnb RESTART IDENTITY CASCADE;
 
 -- POPULATE POSTS
 INSERT INTO post(content)
@@ -72,7 +72,7 @@ $$
                 INSERT INTO post_tag_denormalized(post_id, tag) VALUES (p.post_id, t.tag_name);
             END LOOP;
             INSERT INTO post_tag_array(post_id, tags) VALUES (p.post_id, tag_array);
-            INSERT INTO post_tag_json(post_id, tags) VALUES (p.post_id, array_to_json(tag_array));
+            INSERT INTO post_tag_josnb(post_id, tags) VALUES (p.post_id, array_to_json(tag_array));
 
             counter := counter + 1;
         END LOOP;
