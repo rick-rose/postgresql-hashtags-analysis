@@ -1,4 +1,5 @@
-# Hashtags Storage Analysis
+# PostgreSQL Hashtags Analysis
+A research and development project to determine the optimal and efficient method for storing hashtags in PostgreSQL.
 
 ## Abstract
 Using a `JSONB` column with a PostgreSQL `Generalized Inverted Index` was the most optimal and efficient method for storing and querying hashtags.
