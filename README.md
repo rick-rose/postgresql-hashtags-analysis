@@ -95,12 +95,12 @@ erDiagram
 + A `post` has zero or one `post_tag` record
 
 ### PostgreSQL testbed
-+ Generate 5,000,000 posts
-+ Generate 1,000,000 tags
++ Generate 5 million posts
++ Generate 1 million tags
 + for each post, randomly associate _up to_ 10 tags
-+ for 5,000,000 posts, randomly associate 3 tags (extremely common tags)
-+ for 2,500,000 posts, randomly associate 3 tags (very common tags)
-+ for 1,250,000 posts, randomly associate 3 tags (common tags)
++ for 5 million posts, randomly associate 3 tags (extremely common tags)
++ for 2,5 million posts, randomly associate 3 tags (very common tags)
++ for 1.25 million posts, randomly associate 3 tags (common tags)
 + A `common` tag is defined as a popular tag
 + A `rare` tag is defined as an unpopular tag
 
