@@ -19,3 +19,29 @@ SELECT tag_id, COUNT(*) FROM post_tag_normalized GROUP BY tag_id ORDER BY COUNT(
 
 -- TOP 5 COMMON TAGS
 SELECT tag_id, COUNT(*) FROM post_tag_normalized GROUP BY tag_id ORDER BY COUNT(*) DESC LIMIT 5;
+
+
+-- Query DENORMALIZED
+select post_id
+from post_tag_denormalized
+where tag = 'TAG'
+imit 25 offset 0;
+
+-- Query NORMALIZED
+select post_id
+from post_tag_normalized
+inner join tag on normalized.tag_id = tag.id
+where tag.name = 'TAG'
+limit 25 offset 0;
+
+-- Query JSONB
+select post_id
+from post_tag_json
+where tags OPERATOR(pg_catalog.@>) '["TAG"]'::jsonb
+limit 25 offset 0;
+
+-- Query ARRAY
+select post_id
+from post_tag_array
+where tags OPERATOR(pg_catalog.@>) ARRAY['TAG']
+limit 25 offset 0;
