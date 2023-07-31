@@ -2,7 +2,7 @@
 A research and development project to determine the optimal and efficient method for storing hashtags in PostgreSQL.
 
 ## Abstract
-Using a `JSONB` column with a PostgreSQL `Generalized Inverted Index` was the most optimal and efficient method for storing and querying hashtags.
+Using a `JSONB` column with a PostgreSQL `Generalized Inverted Index` is the most optimal and efficient method for storing and querying hashtags.
 
 ## Introduction
 Hashtags are a way to organize content around a specific topic.
