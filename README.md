@@ -145,150 +145,25 @@ erDiagram
 ## Results
 
 **Number of records**
-```mermaid
-gantt
-  title Number of records - millions
-  todayMarker off
-  dateFormat  X
-  axisFormat %s
-
-  section Denormalized
-  36,239,475  : 0, 36
-  section Normalized
-  36,239,475  : 0, 36
-  section JSONB
-  5  : 0, 5
-  section Array
-  5  : 0, 5
-```
+![Number of database record for each storage method](docs/records.png?raw=true)
 
 **Size of tables**
-```mermaid
-gantt
-  title Size of tables - megabytes
-  todayMarker off
-  dateFormat  X
-  axisFormat %s
-
-  section Denormalized
-  6,344  : 0, 7
-  section Normalized
-  2,580  : 0, 3
-  section JSONB
-  1.744  : 0, 2
-  section Array
-  1,824  : 0, 2
-```
+![Size of database tables for each storage method](docs/size.png?raw=true)
 
 **Query for Most Common Tag (5 million associations)**
-```mermaid
-gantt
-  title Execution time - milliseconds
-  todayMarker off
-  dateFormat  X
-  axisFormat %s
-
-  section Denormalized
-  AVG 53  : 0, 53
-  MED 48  : 0, 48
-  section Normalized
-  AVG 4768  : 0, 4800
-  MED 4756  : 0, 4800
-  section JSONB
-  AVG 56  : 0, 56
-  MED 51  : 0, 51
-  section Array
-  AVG 55  : 0, 55
-  MED 49  : 0, 49
-```
+![Size of database tables for each storage method](docs/first_common_tag.png?raw=true)
 
 **Query for Second Most Common Tag (2.5 million associations)**
-```mermaid
-gantt
-  title Execution time - milliseconds
-  todayMarker off
-  dateFormat  X
-  axisFormat %s
-
-  section Denormalized
-  AVG 55  : 0, 55
-  MED 52  : 0, 52
-  section Normalized
-  AVG 4490  : 0, 4500
-  MED 4508  : 0, 4500
-  section JSONB
-  AVG 53  : 0, 56
-  MED 49  : 0, 51
-  section Array
-  AVG 56  : 0, 56
-  MED 52  : 0, 52
-```
+![Size of database tables for each storage method](docs/second_common_tag.png?raw=true)
 
 **Query for Third Most Common Tag (1.25 million associations)**
-```mermaid
-gantt
-  title Execution time - milliseconds
-  todayMarker off
-  dateFormat  X
-  axisFormat %s
-
-  section Denormalized
-  AVG 57  : 0, 57
-  MED 51  : 0, 51
-  section Normalized
-  AVG 4317  : 0, 4300
-  MED 4325  : 0, 4300
-  section JSONB
-  AVG 52  : 0, 52
-  MED 50  : 0, 50
-  section Array
-  AVG 59  : 0, 59
-  MED 57  : 0, 57
-```
+![Size of database tables for each storage method](docs/third_common_tag.png?raw=true)
 
 **Query for a Random Tag**
-```mermaid
-gantt
-  title Execution time - milliseconds
-  todayMarker off
-  dateFormat  X
-  axisFormat %s
-
-  section Denormalized
-  AVG 70  : 0, 70
-  MED 48  : 0, 48
-  section Normalized
-  AVG 4081  : 0, 4000
-  MED 3990  : 0, 4000
-  section JSONB
-  AVG 50  : 0, 50
-  MED 46  : 0, 46
-  section Array
-  AVG 135  : 0, 135
-  MED 127  : 0, 127
-```
+![Size of database tables for each storage method](docs/random_tag.png?raw=true)
 
 **Query for the Rarest Tag**
-```mermaid
-gantt
-  title Execution time - milliseconds
-  todayMarker off
-  dateFormat  X
-  axisFormat %s
-
-  section Denormalized
-  AVG 60  : 0, 60
-  MED 57  : 0, 57
-  section Normalized
-  AVG 4258  : 0, 4300
-  MED 4222  : 0, 4200
-  section JSONB
-  AVG 63  : 0, 63
-  MED 59  : 0, 59
-  section Array
-  AVG 2090  : 0, 2000
-  MED 1942  : 0, 1900
-```
+![Size of database tables for each storage method](docs/rare_tag.png?raw=true)
 
 ## Discussion
 + The `Denormalized` and `JSONB` methods displayed similar performance
