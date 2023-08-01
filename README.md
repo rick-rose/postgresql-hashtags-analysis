@@ -144,25 +144,25 @@ erDiagram
 
 ## Results
 
-### Number of records
+### Number of records (in millions)
 ![Number of database record for each storage method](resources/records.png?raw=true)
 
-### Size of tables
+### Size of tables (in megabytes)
 ![Size of database tables for each storage method](resources/size.png?raw=true)
 
-### Query for Most Common Tag (5 million associations)
+### Query cost for Most Common Tag (5 million associations)
 ![Size of database tables for each storage method](resources/first_common_tag.png?raw=true)
 
-### Query for Second Most Common Tag (2.5 million associations)
+### Query cost for Second Most Common Tag (2.5 million associations)
 ![Size of database tables for each storage method](resources/second_common_tag.png?raw=true)
 
-### Query for Third Most Common Tag (1.25 million associations)
+### Query cost for Third Most Common Tag (1.25 million associations)
 ![Size of database tables for each storage method](resources/third_common_tag.png?raw=true)
 
-### Query for a Random Tag
+### Query cost for a Random Tag
 ![Size of database tables for each storage method](resources/random_tag.png?raw=true)
 
-### Query for the Rarest Tag
+### Query cost for the Rarest Tag
 ![Size of database tables for each storage method](resources/rare_tag.png?raw=true)
 
 ## Discussion
