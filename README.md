@@ -145,25 +145,25 @@ erDiagram
 ## Results
 
 **Number of records**
-![Number of database record for each storage method](docs/records.png?raw=true)
+![Number of database record for each storage method](resources/records.png?raw=true)
 
 **Size of tables**
-![Size of database tables for each storage method](docs/size.png?raw=true)
+![Size of database tables for each storage method](resources/size.png?raw=true)
 
 **Query for Most Common Tag (5 million associations)**
-![Size of database tables for each storage method](docs/first_common_tag.png?raw=true)
+![Size of database tables for each storage method](resources/first_common_tag.png?raw=true)
 
 **Query for Second Most Common Tag (2.5 million associations)**
-![Size of database tables for each storage method](docs/second_common_tag.png?raw=true)
+![Size of database tables for each storage method](resources/second_common_tag.png?raw=true)
 
 **Query for Third Most Common Tag (1.25 million associations)**
-![Size of database tables for each storage method](docs/third_common_tag.png?raw=true)
+![Size of database tables for each storage method](resources/third_common_tag.png?raw=true)
 
 **Query for a Random Tag**
-![Size of database tables for each storage method](docs/random_tag.png?raw=true)
+![Size of database tables for each storage method](resources/random_tag.png?raw=true)
 
 **Query for the Rarest Tag**
-![Size of database tables for each storage method](docs/rare_tag.png?raw=true)
+![Size of database tables for each storage method](resources/rare_tag.png?raw=true)
 
 ## Discussion
 + The `Denormalized` and `JSONB` methods displayed similar performance
