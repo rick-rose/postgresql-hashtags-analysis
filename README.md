@@ -166,6 +166,6 @@ erDiagram
 
 ## Discussion
 + The `Denormalized` and `JSONB` methods displayed similar performance
-+ The `Array` method displayed degradation with rare tag querying
++ The `Array` method displayed degradation with least common tag querying
 + The `Normalized` method displayed inefficient querying throughout
 + Based upon storage size and efficient querying costs, the `JSONB` method is the best choice
