@@ -105,7 +105,6 @@ erDiagram
 + for 2,5 million posts, randomly associate 3 tags (very common tags)
 + for 1.25 million posts, randomly associate 3 tags (common tags)
 + A `common` tag is defined as a popular tag
-+ A `rare` tag is defined as an unpopular tag
 
 ### PostgreSQL queries
 
@@ -162,7 +161,7 @@ erDiagram
 ### Query cost for a Random Tag
 ![Size of database tables for each storage method](resources/random_tag.png?raw=true)
 
-### Query cost for the Rarest Tag
+### Query cost for the Least Common Tag
 ![Size of database tables for each storage method](resources/rare_tag.png?raw=true)
 
 ## Discussion
