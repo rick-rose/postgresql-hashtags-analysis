@@ -18,84 +18,12 @@ Hashtags are ubiquitous in modern applications and having an optimal and efficie
 
 ## Methods
 
-### PostgreSQL storage configurations
+### PostgreSQL ERD
 
-**Denormalized Storage**
-```mermaid
-erDiagram
-  post ||--o{ post_tag : has_zero_or_many
-  post {
-    bigint id PK
-    text content
-  }
-  post_tag
-  post_tag {
-    bigint id PK
-    bigint post_id FK
-    text tag
-  }
-```
-+ A `post` has zero or many `post_tag` records
-+ A unique index on `(post_id, tag)` within the `post_tag` table
-+ An index on `tag` within the `post_tag` table
-+ The `tag` value in the `post_tag` table can be redundant
+![ERD of each storage method](resources/erd.png?raw=true)
 
-**Normalized Storage**
-```mermaid
-erDiagram
-  post ||--o{ post_tag : has_zero_or_many
-  post {
-    bigint id PK
-    text content
-  }
-  tag ||--o{ post_tag : has_zero_or_many
-  tag {
-    bigint id
-    text name
-  } 
-  post_tag
-  post_tag {
-    bigint post_id PK, FK
-    bigint tag_id PK, FK
-  }
-```
-+ A `post` has zero or many `post_tag` records
-+ A `tag` has zero or many `post_tag` records
-+ A unique index on `(post_id, tag_id)` within the `post_tag`
-  
-
-**JSONB Storage**
-```mermaid
-erDiagram
-  post ||--o| post_tag : has_zero_or_one
-  post {
-    bigint id PK
-    text content
-  }
-  post_tag
-  post_tag {
-    bigint id PK, FK
-    jsonb tags
-  } 
-```
-+ A `post` has zero or one `post_tag` record
-+ A GIN (Generalized Inverted Index) on `tags` within the `post_tag` table
-
-**Array Storage**
-```mermaid
-erDiagram
-  post ||--o| post_tag : has_zero_or_one
-  post {
-    bigint id PK
-    text content
-  }
-  post_tag
-  post_tag {
-    bigint id PK, FK
-    text[] tags
-  }
-```
-+ A `post` has zero or one `post_tag` record
+### PostgreSQL GIN
+The generalized inverted index (GIN) works with data types that can be broken down into smaller elements for easier searching (e.g. array elements, words in a text document). A GIN is comparable to a book index.
 
 ### PostgreSQL testbed
 + Generate 5 million posts
